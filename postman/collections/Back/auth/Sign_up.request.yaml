@@ -24,5 +24,7 @@ body:
     \    \"addInfo\":\"Test login\"\r
 
     }"
+auth:
+  type: noauth
 settings: {}
 order: 2000
