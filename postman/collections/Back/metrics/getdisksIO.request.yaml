@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{baseUrl}}/api/metric/disksIO"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"metricTimeCriteria\":{\r
+
+    \        \"serverID\":2,\r
+
+    \        \"startTime\":\"{{startTime}}\",\r
+
+    \        \"endTime\":\"{{endTime}}\"\r
+
+    \    }\r
+
+    }"
+settings: {}
+order: 6000

@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{baseUrl}}/api/server/update"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\":1,\r
+
+    \    \"address\":\"19.19\",\r
+
+    \    \"serverName\":\"UPDATE\",\r
+
+    \    \"addInfo\":\"test update\"\r
+
+    }"
+settings: {}
+order: 5000

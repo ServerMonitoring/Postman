@@ -1,0 +1,26 @@
+$kind: http-request
+url: http://localhost:8080/api/node/static
+method: POST
+headers:
+  X-API-Key: ""
+body:
+  type: json
+  content: "{\r
+
+    \  \"hostname\": \"DESKTOP-QLBKMAV\",\r
+
+    \  \"os\": \"Windows-10-10.0.19045-SP0\",\r
+
+    \  \"cpu_model\": \"AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD\",\r
+
+    \  \"cpu_count_cores\": 16,\r
+
+    \  \"cpu_count_cores_physical\": 8,\r
+
+    \  \"min_freq\": 0.0,\r
+
+    \  \"max_freq\": 3401.0\r
+
+    }"
+settings: {}
+order: 1000

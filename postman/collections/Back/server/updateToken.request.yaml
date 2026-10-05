@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{baseUrl}}/api/server/token/refresh"
+method: POST
+body:
+  type: json
+  content: "1"
+settings: {}
+order: 2000

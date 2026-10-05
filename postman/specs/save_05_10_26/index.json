@@ -1,0 +1,612 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Back",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "paths": {
+    "/auth/sign_in": {
+      "post": {
+        "summary": "sig_in",
+        "responses": {},
+        "tags": [
+          "auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "login": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "login": "admin",
+                "password": "admin"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/sign_up": {
+      "post": {
+        "summary": "Sign_up",
+        "responses": {},
+        "tags": [
+          "auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "surname": {
+                    "type": "string"
+                  },
+                  "patronymic": {
+                    "type": "string"
+                  },
+                  "department": {
+                    "type": "string"
+                  },
+                  "position": {
+                    "type": "string"
+                  },
+                  "login": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "role": {
+                    "type": "string"
+                  },
+                  "addInfo": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "name": "Ilya",
+                "surname": "Eliseevc",
+                "patronymic": "Denisovich",
+                "department": "OpenCode",
+                "position": "System Admin",
+                "login": "SysLogsы",
+                "password": "SysLogsы",
+                "role": "USER",
+                "addInfo": "Test login"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/server/create": {
+      "post": {
+        "summary": "createServer",
+        "responses": {},
+        "tags": [
+          "server"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string"
+                  },
+                  "addInfo": {
+                    "type": "string"
+                  },
+                  "serverName": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "address": "155.165.2.2.2",
+                "addInfo": "test server 2.2.2",
+                "serverName": "test server"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/server/token/refresh": {
+      "post": {
+        "summary": "updateToken",
+        "responses": {},
+        "tags": [
+          "server"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer"
+              },
+              "example": 1
+            }
+          }
+        }
+      }
+    },
+    "/api/server/min_info": {
+      "post": {
+        "summary": "getMinInfo",
+        "responses": {},
+        "tags": [
+          "server"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": "// {   \r\n//     \"id\":1,\r\n//     \"distinct\":true,\r\n//     \"sortBy\":\"\",\r\n//     \"hostname\":\"hostname\",\r\n//     \"osInfo\":\"osInfo\",\r\n//     \"address\":\"address\",\r\n//     \"addInfo\":\"addInfo\",\r\n//     \"online\":true,\r\n//     \"cpuModel\":\"cpuModel\",\r\n//     \"cpuCountCores\":16,\r\n//     \"cpuCountCoresPhysical\":16,\r\n//     \"minFreq\":0,\r\n//     \"maxFreq\":0\r\n// }\r\n{\r\n    \r\n}"
+            }
+          }
+        }
+      }
+    },
+    "/api/server/full_info": {
+      "post": {
+        "summary": "getFullInfo",
+        "responses": {},
+        "tags": [
+          "server"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": "// {   \r\n//     \"id\":1,\r\n//     \"distinct\":true,\r\n//     \"sortBy\":\"\",\r\n//     \"hostname\":\"hostname\",\r\n//     \"osInfo\":\"osInfo\",\r\n//     \"address\":\"address\",\r\n//     \"addInfo\":\"addInfo\",\r\n//     \"online\":true,\r\n//     \"cpuModel\":\"cpuModel\",\r\n//     \"cpuCountCores\":16,\r\n//     \"cpuCountCoresPhysical\":16,\r\n//     \"minFreq\":0,\r\n//     \"maxFreq\":0\r\n// }\r\n{}"
+            }
+          }
+        }
+      }
+    },
+    "/api/server/update": {
+      "post": {
+        "summary": "update",
+        "responses": {},
+        "tags": [
+          "server"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "address": {
+                    "type": "string"
+                  },
+                  "serverName": {
+                    "type": "string"
+                  },
+                  "addInfo": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "id": 1,
+                "address": "19.19",
+                "serverName": "UPDATE",
+                "addInfo": "test update"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/metric/disks": {
+      "post": {
+        "summary": "getDisks",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": "{\r\n    \"metricTimeCriteria\":{\r\n        \"serverID\":1\r\n        //\"startTime\":\"{{startTime}}\",\r\n        //\"endTime\":\"{{endTime}}\"\r\n    }\r\n}"
+            }
+          }
+        }
+      }
+    },
+    "/api/metric": {
+      "post": {
+        "summary": "getMetrics",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": "{\r\n    // \"baseCriteria\":{\r\n    //     \"id\":5,\r\n    //     \"distinct\":true,\r\n    //     \"sortBy\":\"uptime\"\r\n    // },\r\n    \"metricTimeCriteria\":{\r\n    //    \"startTime\":\"{{startTime}}\",\r\n    //    \"endTime\":\"{{endTime}}\",\r\n        // \"currentTime\":\"2025-05-13T13:34:54Z\",\r\n        // \"metricId\":5,\r\n        \"serverID\":1\r\n    }\r\n}"
+            }
+          }
+        }
+      }
+    },
+    "/api/metric/memory": {
+      "post": {
+        "summary": "getMemory",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": "{\r\n    \"metricTimeCriteria\":{\r\n        \"serverID\":1//,\r\n        //\"startTime\":\"2025-06-02T20:36:10.633Z\",\r\n        //\"endTime\":\"2025-06-03T20:36:10.633Z\"\r\n    }\r\n}\r\n"
+            }
+          }
+        }
+      }
+    },
+    "/api/metric/net_interface": {
+      "post": {
+        "summary": "getNetInterface",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "metricTimeCriteria": {
+                    "type": "object",
+                    "properties": {
+                      "serverID": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              },
+              "example": {
+                "metricTimeCriteria": {
+                  "serverID": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/metric/gpu": {
+      "post": {
+        "summary": "getGpu",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": "{\r\n    \"baseCriteria\":{\r\n        //\"id\":7,\r\n        \"distinct\":true,\r\n        \"sortBy\":\"\"\r\n    },\r\n    \"metricTimeCriteria\":{\r\n        \"startTime\":\"2025-05-13T13:34:19Z\",\r\n        \"endTime\":\"2025-05-13T13:35:18Z\",\r\n        \"currentTime\":\"2025-05-13T13:34:54Z\",\r\n        //\"metricId\":5,\r\n        \"serverID\":1\r\n    },\r\n    \"gpuName\":\"NVIDIA\"\r\n}"
+            }
+          }
+        }
+      }
+    },
+    "/api/metric/disksIO": {
+      "post": {
+        "summary": "getdisksIO",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "metricTimeCriteria": {
+                    "type": "object",
+                    "properties": {
+                      "serverID": {
+                        "type": "integer"
+                      },
+                      "startTime": {
+                        "type": "string"
+                      },
+                      "endTime": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "example": {
+                "metricTimeCriteria": {
+                  "serverID": 2,
+                  "startTime": "{{startTime}}",
+                  "endTime": "{{endTime}}"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/metric/static": {
+      "post": {
+        "summary": "getStatic",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "example": "{\r\n    \"userId\":1\r\n    // \"hostname\":\"hostname\",\r\n    // \"osInfo\":\"osInfo\",\r\n    // \"address\":\"address\",\r\n    // \"addInfo\":\"addInfo\",\r\n    // \"online\":true,\r\n    // \"cpuModel\":\"cpuModel\",\r\n    // \"cpuCountCores\":16,\r\n    // \"cpuCountCoresPhysical\":8,\r\n    // \"minFreq\":3014.0,\r\n    // \"maxFreq\":3014.0\r\n}"
+            }
+          }
+        }
+      }
+    },
+    "/api/metric/swap": {
+      "post": {
+        "summary": "getSWAP",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "metricTimeCriteria": {
+                    "type": "object",
+                    "properties": {
+                      "serverID": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              },
+              "example": {
+                "metricTimeCriteria": {
+                  "serverID": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/metric/cpu": {
+      "post": {
+        "summary": "getCPU",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "metricTimeCriteria": {
+                    "type": "object",
+                    "properties": {
+                      "startTime": {
+                        "type": "string"
+                      },
+                      "endTime": {
+                        "type": "string"
+                      },
+                      "serverID": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              },
+              "example": {
+                "metricTimeCriteria": {
+                  "startTime": "{{startTime}}",
+                  "endTime": "{{endTime}}",
+                  "serverID": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/metric/network_connection": {
+      "post": {
+        "summary": "getNetworkConnection",
+        "responses": {},
+        "tags": [
+          "metrics"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "metricTimeCriteria": {
+                    "type": "object",
+                    "properties": {
+                      "serverID": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              },
+              "example": {
+                "metricTimeCriteria": {
+                  "serverID": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/user": {
+      "put": {
+        "summary": "updateUser",
+        "responses": {},
+        "tags": [
+          "user"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "surname": {
+                    "type": "string"
+                  },
+                  "patronymic": {
+                    "type": "string"
+                  },
+                  "department": {
+                    "type": "string"
+                  },
+                  "position": {
+                    "type": "string"
+                  },
+                  "login": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "preferredLanguage": {
+                    "type": "integer"
+                  },
+                  "addInfo": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "name": "Eliseev",
+                "surname": "surname",
+                "patronymic": "patronymic",
+                "department": "PSUTI",
+                "position": "Admin",
+                "login": "admin",
+                "password": "admin",
+                "preferredLanguage": 0,
+                "addInfo": "addInfo"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "getUser",
+        "responses": {},
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/admin": {
+      "get": {
+        "summary": "getAllUsers",
+        "responses": {},
+        "tags": [
+          "Admin"
+        ]
+      },
+      "delete": {
+        "summary": "DeleteUser",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "example": 2
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "Admin"
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ]
+}

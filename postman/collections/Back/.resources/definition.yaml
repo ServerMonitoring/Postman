@@ -1,0 +1,42 @@
+$kind: collection
+variables:
+  baseUrl: http://localhost:8080
+  userAuth: bearer token
+scripts:
+  - type: http:beforeRequest
+    code: "// Текущее время в UTC\r
+
+      const now = new Date();\r
+
+      \r
+
+      // Сколько минут назад — например, 1\r
+
+      const minutesAgo = 5;\r
+
+      \r
+
+      // Стартовое время — now - 3 минуты\r
+
+      const startTime = new Date(now.getTime() - minutesAgo * 60 * 1000);\r
+
+      \r
+
+      // Форматируем в ISO строку и убираем миллисекунды\r
+
+      const formatToISOString = (date) => date.toISOString().split('.')[0] + 'Z';\r
+
+      \r
+
+      // Сохраняем переменные в окружение Postman\r
+
+      pm.environment.set(\"startTime\", formatToISOString(startTime));\r
+
+      pm.environment.set(\"endTime\", formatToISOString(now));\r\n"
+    language: text/javascript
+auth:
+  - id: 5fc27dba-8b05-451b-8315-0fa040bd0cee
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{userAuth}}"

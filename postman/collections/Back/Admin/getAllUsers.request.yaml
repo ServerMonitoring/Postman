@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{baseUrl}}/api/admin"
+method: GET
+settings: {}
+order: 1000

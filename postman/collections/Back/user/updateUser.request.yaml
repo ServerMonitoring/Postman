@@ -1,0 +1,28 @@
+$kind: http-request
+url: "{{baseUrl}}/api/user"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\":\"Eliseev\",\r
+
+    \    \"surname\":\"surname\",\r
+
+    \    \"patronymic\":\"patronymic\",\r
+
+    \    \"department\":\"PSUTI\",\r
+
+    \    \"position\":\"Admin\",\r
+
+    \    \"login\":\"admin\",\r
+
+    \    \"password\":\"admin\",\r
+
+    \    \"preferredLanguage\":0,\r
+
+    \    \"addInfo\":\"addInfo\"\r
+
+    }"
+settings: {}
+order: 1000

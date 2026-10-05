@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{baseUrl}}/api/metric/network_connection"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"metricTimeCriteria\":{\r
+
+    \        \"serverID\":2\r
+
+    \    }\r
+
+    }\r\n"
+settings: {}
+order: 10000

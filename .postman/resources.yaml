@@ -1,0 +1,16 @@
+workspace:
+  id: 73a4990b-502e-4da7-b9b5-6d8f0f88a419
+cloudResources:
+  collections:
+    ../postman/collections/node: 29332776-4dc75905-3185-490a-a930-9387a2ff5d95
+    ../postman/collections/Back: 29332776-fd5c0d7f-2cfc-47ca-9354-53d07311943f
+  globals:
+    ../postman/globals/workspace.globals.yaml: 745ba2b6-6dec-4975-89f1-a6451a8e2c5b
+  specs:
+    ../D:/Диплом/SVProject/Postman/postman/specs/save_05_10_26/index.json: 78ab1b78-3b68-4d76-9f81-999f96f604cc
+resourceNameMappings:
+  specs:
+    - ../D:/Диплом/SVProject/Postman/postman/specs/save_05_10_26/index.json: save_05_10_26
+localResources:
+  specs:
+    - ../D:/Диплом/SVProject/Postman/postman/specs/save_05_10_26/index.json

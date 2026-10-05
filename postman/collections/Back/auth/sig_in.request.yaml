@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{baseUrl}}/auth/sign_in"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"login\":\"admin\",\r
+
+    \    \"password\":\"admin\"\r
+
+    }"
+auth:
+  type: noauth
+scripts:
+  - type: afterResponse
+    code: "let token = pm.response.text();\r
+
+      pm.collectionVariables.set(\"userAuth\", token);"
+    language: text/javascript
+settings: {}
+order: 1000

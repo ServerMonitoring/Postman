@@ -1,0 +1,28 @@
+$kind: http-request
+url: "{{baseUrl}}/auth/sign_up"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\":\"Ilya\",\r
+
+    \    \"surname\":\"Eliseevc\",\r
+
+    \    \"patronymic\":\"Denisovich\",\r
+
+    \    \"department\":\"OpenCode\",\r
+
+    \    \"position\":\"System Admin\",\r
+
+    \    \"login\":\"SysLogsы\",\r
+
+    \    \"password\":\"SysLogsы\",\r
+
+    \    \"role\":\"USER\",\r
+
+    \    \"addInfo\":\"Test login\"\r
+
+    }"
+settings: {}
+order: 2000

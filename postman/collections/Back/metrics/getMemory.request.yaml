@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{baseUrl}}/api/metric/memory"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"metricTimeCriteria\":{\r
+
+    \        \"serverID\":1//,\r
+
+    \        //\"startTime\":\"2025-06-02T20:36:10.633Z\",\r
+
+    \        //\"endTime\":\"2025-06-03T20:36:10.633Z\"\r
+
+    \    }\r
+
+    }\r\n"
+settings: {}
+order: 3000

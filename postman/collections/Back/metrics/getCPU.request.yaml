@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{baseUrl}}/api/metric/cpu"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \     \"metricTimeCriteria\":{\r
+
+    \        \"startTime\":\"{{startTime}}\",\r
+
+    \        \"endTime\":\"{{endTime}}\",\r
+
+    \        \"serverID\":2\r
+
+    \    }\r
+
+    }\r\n"
+settings: {}
+order: 9000

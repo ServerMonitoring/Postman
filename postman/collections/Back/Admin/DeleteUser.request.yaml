@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{baseUrl}}/api/admin?userId=2"
+method: DELETE
+queryParams:
+  userId: "2"
+settings: {}
+order: 2000

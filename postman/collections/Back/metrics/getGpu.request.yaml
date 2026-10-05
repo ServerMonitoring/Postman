@@ -1,0 +1,36 @@
+$kind: http-request
+url: "{{baseUrl}}/api/metric/gpu"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"baseCriteria\":{\r
+
+    \        //\"id\":7,\r
+
+    \        \"distinct\":true,\r
+
+    \        \"sortBy\":\"\"\r
+
+    \    },\r
+
+    \    \"metricTimeCriteria\":{\r
+
+    \        \"startTime\":\"2025-05-13T13:34:19Z\",\r
+
+    \        \"endTime\":\"2025-05-13T13:35:18Z\",\r
+
+    \        \"currentTime\":\"2025-05-13T13:34:54Z\",\r
+
+    \        //\"metricId\":5,\r
+
+    \        \"serverID\":1\r
+
+    \    },\r
+
+    \    \"gpuName\":\"NVIDIA\"\r
+
+    }"
+settings: {}
+order: 5000

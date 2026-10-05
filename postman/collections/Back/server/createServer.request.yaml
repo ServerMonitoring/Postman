@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{baseUrl}}/api/server/create"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"address\":\"155.165.2.2.2\",\r
+
+    \    \"addInfo\":\"test server 2.2.2\",\r
+
+    \    \"serverName\":\"test server\"\r
+
+    }\r\n"
+settings: {}
+order: 1000
