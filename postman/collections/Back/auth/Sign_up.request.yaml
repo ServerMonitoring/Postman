@@ -25,6 +25,8 @@ body:
 
     }"
 auth:
-  type: noauth
+  type: inherit
+  credentials:
+    id: 5fc27dba-8b05-451b-8315-0fa040bd0cee
 settings: {}
-order: 2000
+order: 3000

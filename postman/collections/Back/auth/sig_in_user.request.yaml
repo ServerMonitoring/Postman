@@ -5,9 +5,9 @@ body:
   type: json
   content: "{\r
 
-    \    \"login\":\"admin\",\r
+    \    \"login\":\"SysLogsы\",\r
 
-    \    \"password\":\"admin\"\r
+    \    \"password\":\"SysLogsы\"\r
 
     }"
 auth:
@@ -19,4 +19,4 @@ scripts:
       pm.collectionVariables.set(\"userAuth\", token);"
     language: text/javascript
 settings: {}
-order: 1000
+order: 1155

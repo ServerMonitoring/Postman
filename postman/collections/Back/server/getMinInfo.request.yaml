@@ -3,7 +3,9 @@ url: "{{baseUrl}}/api/server/min_info"
 method: POST
 body:
   type: json
-  content: "// {   \r
+  content: "{   \r
+
+    \    //\"userId\":1,\r
 
     //     \"id\":1,\r
 
@@ -30,12 +32,6 @@ body:
     //     \"minFreq\":0,\r
 
     //     \"maxFreq\":0\r
-
-    // }\r
-
-    {\r
-
-    \    \r
 
     }"
 settings: {}
